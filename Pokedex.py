@@ -796,8 +796,6 @@ def runWindow(winWidth = 800, winHeight = 600):
     scrollbar.pack(side=LEFT, fill=Y)
     pokelist.pack(side=LEFT, fill=Y)
 
-    root["bg"] = "SlateGray1"
-
 #=================================================Aesthetics
 
     canvas = Canvas(root, width=winWidth, height=winHeight)
@@ -806,6 +804,9 @@ def runWindow(winWidth = 800, winHeight = 600):
     
     canvas.create_rectangle(350, 50, 750, 550, fill = "CadetBlue1", outline = "turquoise1")
     canvas.create_rectangle(0, 0, 800, 600, fill = "#ccffcc", outline = "#DEB887") #color=lightgreen, outline=tan
+    bgImage = PhotoImage(file = "Pokedex BG copy.png")
+    canvas.create_image(0, 0,anchor = NW, image = bgImage)
+    
     number = canvas.create_text(120, 35, font="Verdana 30 bold", text="#000")
 
     canvas.create_line(40, 60, 200, 60, width=4)
