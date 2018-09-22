@@ -4,10 +4,12 @@ import copy
 #whoa
 
 from tkinter import *
+from PIL import Image, ImageTk
 
 #==============================import math
 import string
 import copy
+
 #whoa
 
 from tkinter import *
@@ -632,6 +634,7 @@ desList = (
 
 
 def loadImages():
+    
     global pokemonImages
     pokemonImages = []
     pokemonImages.append(PhotoImage(file = "bulbasaur.gif")) #1
@@ -851,10 +854,12 @@ def runWindow(winWidth = 800, winHeight = 600):
             name = canvas.create_text(500, 35, font="Verdana 30 bold", text=pokemonList[current[0]][1],
                 fill = "white")
             
+            # IMAGE
             nonlocal image
             canvas.delete(image)
-            image = canvas.create_image(500, 120,anchor = N, image = pokemonImages[current[0]])
-            
+            pokemonimage = pokemonImages[current[0]]
+            image = canvas.create_image(500, 120,anchor = N, image = pokemonimage)
+    
             typetext = ""
             if len(pokemonList[current[0]][2]) == 2:
                 typetext = pokemonList[current[0]][2][0] + "/" + pokemonList[current[0]][2][1]
