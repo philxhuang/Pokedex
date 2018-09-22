@@ -7,10 +7,21 @@ from tkinter import *
 def runWindow(winWidth = 800, winHeight = 600):
     root = Tk()
     root.resizable(width=False, height=False) # prevents resizing window
+
+    scrollbar = Scrollbar(root, bd=0)
+    pokelist = Listbox(root, yscrollcommand = scrollbar.set, selectmode=BROWSE)
+    for i in range(100):
+        pokelist.insert(END, str(i), "Bulbasaur")
+    scrollbar.config(command=pokelist.yview)
+    scrollbar.pack(side=LEFT, fill=Y)
+    pokelist.pack(side=LEFT, fill=Y)
+
     root["bg"] = "SlateGray1"
+
     canvas = Canvas(root, width=winWidth, height=winHeight)
     canvas.configure(bd=0, highlightthickness=0)
-    canvas.pack()
+    canvas.pack(side=RIGHT, fill=BOTH)
+     
     
     canvas.create_rectangle(350, 50, 750, 550, fill = "CadetBlue1", outline = "turquoise1")
     
@@ -24,6 +35,9 @@ if __name__ == '__main__':
 
 
 '''
+
+151 Pokemons
+=======
 #001	Bulbasaur Grass	Poison
 #002	Ivysaur Grass	Poison
 #003	#003	Venusaur Grass	Poison
@@ -45,4 +59,5 @@ if __name__ == '__main__':
 #019	#019	Rattata Normal
 #020	#020	Raticate Normal
 #021	#021	Spearow Normal	Flying
+
 '''
