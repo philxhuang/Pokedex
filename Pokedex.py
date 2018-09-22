@@ -4,7 +4,7 @@ import copy
 
 from tkinter import *
     
-def runWindow(winWidth = 500, winHeight = 500):
+def runWindow(winWidth = 800, winHeight = 800):
     root = Tk()
     root.resizable(width=False, height=False) # prevents resizing window
     canvas = Canvas(root, width=winWidth, height=winHeight)
