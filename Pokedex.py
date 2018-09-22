@@ -38,8 +38,8 @@ def runWindow(winWidth = 800, winHeight = 600):
     
     canvas.create_rectangle(350, 50, 750, 550, fill = "CadetBlue1", outline = "turquoise1")
     canvas.create_rectangle(0, 0, 800, 600, fill = "#ccffcc", outline = "#DEB887") #color=lightgreen, outline=tan
-    canvas.create_text(120, 35, font="Verdana 30 bold", text=pokemonList[0][0])
-    canvas.create_text(500, 35, font="Verdana 30 bold", text=pokemonList[0][1])
+    number = canvas.create_text(120, 35, font="Verdana 30 bold", text=pokemonList[0][0])
+    name = canvas.create_text(500, 35, font="Verdana 30 bold", text=pokemonList[0][1])
     canvas.create_line(40, 60, 200, 60, width=4)
     canvas.create_line(300, 60, 700, 60, width=3)
     
@@ -52,9 +52,12 @@ def runWindow(winWidth = 800, winHeight = 600):
     def displayinfo(event):
         current = pokelist.curselection()
         if len(current) > 0:
-            canvas.create_rectangle(0, 0, 800, 59, fill = "#ccffcc", outline="#ccffcc")
-            canvas.create_text(120, 35, font="Verdana 30 bold", text=pokemonList[current[0]][0])
-            canvas.create_text(500, 35, font="Verdana 30 bold", text=pokemonList[current[0]][1])
+            nonlocal number
+            nonlocal name
+            canvas.delete(number)
+            canvas.delete(name)
+            number = canvas.create_text(120, 35, font="Verdana 30 bold", text=pokemonList[current[0]][0])
+            name = canvas.create_text(500, 35, font="Verdana 30 bold", text=pokemonList[current[0]][1])
 #================================================
     
     pokelist.bind("<<ListboxSelect>>", displayinfo)
