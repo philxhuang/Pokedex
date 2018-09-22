@@ -783,6 +783,7 @@ def loadImages():
 def runWindow(winWidth = 800, winHeight = 600):
     root = Tk()
     root.resizable(width=False, height=False) # prevents resizing window
+    root.title("Pokedex")
 
     loadImages()
 
