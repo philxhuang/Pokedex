@@ -47,12 +47,12 @@ def runWindow(winWidth = 800, winHeight = 600):
     canvas.create_text(70, 210, font="Verdana 12", text="Evolve\nLevel")
     canvas.create_text(70, 290, font="Verdana 12", text="Egg\nGroups")
     
-    
     canvas.create_text(90, 520, font="Verdana 12", text="Pokedex\nDescription")
 #================================================
     def displayinfo(event):
         current = pokelist.curselection()
         if len(current) > 0:
+            canvas.create_rectangle(0, 0, 800, 59, fill = "#ccffcc", outline="#ccffcc")
             canvas.create_text(120, 35, font="Verdana 30 bold", text=pokemonList[current[0]][0])
             canvas.create_text(500, 35, font="Verdana 30 bold", text=pokemonList[current[0]][1])
 #================================================
