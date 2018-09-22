@@ -43,7 +43,7 @@ categoryList = (
 ('Chrysalis Pokémon'),
 ('Butterfly Pokémon'),
 ('Hairy Caterpillar \n Pokémon'),
-('Pupa Pokémon'),
+('Cocoon Pokémon'),
 ('Poison Bee \n Pokémon'),
 ('Small Bird \n Pokémon'),
 ('Bird Pokémon'),
