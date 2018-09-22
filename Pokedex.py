@@ -24,7 +24,8 @@ def runWindow(winWidth = 800, winHeight = 600):
      
     
     canvas.create_rectangle(350, 50, 750, 550, fill = "CadetBlue1", outline = "turquoise1")
-    
+    canvas.create_line(40, 60, 200, 60, width=4)
+    canvas.create_line(300, 60, 700, 60, width=3)
     root.mainloop()
 
 def main():
