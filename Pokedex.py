@@ -236,9 +236,9 @@ categoryList = (
 ('Telekinesis Pokémon'),
 ('Telekinesis Pokémon'),
 ('Telekinesis Pokémon'),#65
-('Superhuman Strength Pokémon'),
-('Superhuman Strength Pokémon'),
-('Superhuman Strength Pokémon'),
+('Superhuman Strength \n Pokémon'),
+('Superhuman Strength \n Pokémon'),
+('Superhuman Strength \n Pokémon'),
 ('Flower Pokémon'),
 ('Flycatcher Pokémon'),#70
 ('Flycatcher Pokémon'),
@@ -253,7 +253,7 @@ categoryList = (
 ('Hermit Crab Pokémon'),#80
 ('Magnet Pokémon'),
 ('Magnet Pokémon'),
-('Spot-Billed Duck Pokémon'),
+('Spot-Billed \n Duck Pokémon'),
 ('Twin Bird Pokémon'),
 ('Triplet Bird Pokémon'),#85
 ('Sea Lion Pokémon'),
@@ -268,7 +268,7 @@ categoryList = (
 ('Rock Snake Pokémon'),#95
 ('Hypnosis Pokémon'),
 ('Hypnosis Pokémon'),
-('Freshwater Crab Pokémon'),
+('Freshwater Crab \n Pokémon'),
 ('Pincer Pokémon'),
 ('Ball Pokémon'),#100
 ('Ball Pokémon'),
