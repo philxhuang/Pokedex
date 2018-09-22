@@ -82,6 +82,7 @@ def runWindow(winWidth = 800, winHeight = 600):
     root.resizable(width=False, height=False) # prevents resizing window
 
     scrollbar = Scrollbar(root, bd=0)
+    Button(root, text = "EXTERMINATE ASAP", command=root.destroy).pack()
     pokelist = Listbox(root, yscrollcommand = scrollbar.set, selectmode=BROWSE)
     for i in pokemonList:
         pokelist.insert(END, i[0] + " " + i[1])
