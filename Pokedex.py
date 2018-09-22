@@ -160,7 +160,7 @@ def runWindow(winWidth = 800, winHeight = 600):
             number = canvas.create_text(120, 35, font="Verdana 30 bold", text=pokemonList[current[0]][0])
             name = canvas.create_text(500, 35, font="Verdana 30 bold", text=pokemonList[current[0]][1])
             
-            canvas.create_image(400,400,anchor = NW, image = pokemonImages[current[0]])
+            canvas.create_image(500, 120,anchor = N, image = pokemonImages[current[0]])
             
             typetext = ""
             if len(pokemonList[current[0]][2]) == 2:
