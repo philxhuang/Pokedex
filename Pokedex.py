@@ -536,7 +536,7 @@ def runWindow(winWidth = 800, winHeight = 600):
 
     category = canvas.create_text(130, 120, font="Verdana 14 bold", text='')
     
-    image = canvas.create_image(500, 120,anchor = N, image = "Who-is-that-pokemon.png")
+    image = canvas.create_image(500, 120,anchor = N, image = PhotoImage(file="Who-is-that-pokemon.png"))
 
     canvas.create_text(60, 180, font="Verdana 12", text="Type")
     types = canvas.create_text(130, 180, font="Verdana 12", text="", anchor=W)
