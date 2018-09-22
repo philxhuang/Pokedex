@@ -33,15 +33,11 @@ def runWindow(winWidth = 800, winHeight = 600):
     canvas = Canvas(root, width=winWidth, height=winHeight)
     canvas.configure(bd=0, highlightthickness=0)
     canvas.pack(side=RIGHT, fill=BOTH)
-
-<<<<<<< HEAD
     
     canvas.create_rectangle(350, 50, 750, 550, fill = "CadetBlue1", outline = "turquoise1")
-=======
     canvas.create_rectangle(0, 0, 800, 600, fill = "#ccffcc", outline = "#DEB887") #color=lightgreen, outline=tan
     canvas.create_line(40, 60, 200, 60, width=4)
     canvas.create_line(300, 60, 700, 60, width=3)
->>>>>>> dfdfa328eef5b12c77e52ecfab54572f676f9a17
     
     root.mainloop()
 
