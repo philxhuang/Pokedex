@@ -4,13 +4,15 @@ import copy
 
 from tkinter import *
     
-def runWindow(winWidth = 800, winHeight = 800):
+def runWindow(winWidth = 800, winHeight = 600):
     root = Tk()
     root.resizable(width=False, height=False) # prevents resizing window
     root["bg"] = "SlateGray1"
     canvas = Canvas(root, width=winWidth, height=winHeight)
     canvas.configure(bd=0, highlightthickness=0)
     canvas.pack()
+    
+    canvas.create_rectangle(350, 50, 750, 550, fill = "CadetBlue1", outline = "turquoise1")
     
     root.mainloop()
 
