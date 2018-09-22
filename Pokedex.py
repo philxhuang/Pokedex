@@ -22,5 +22,6 @@ if __name__ == '__main__':
 
 
 '''
-151 Pokemons
+#001 Bulbasaur Grass/Poison Green
+
 '''
