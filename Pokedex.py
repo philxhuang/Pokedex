@@ -809,35 +809,33 @@ def runWindow(winWidth = 800, winHeight = 600):
     canvas.configure(bd=0, highlightthickness=0)
     canvas.pack(side=RIGHT, fill=BOTH)
     
-    canvas.create_rectangle(350, 50, 750, 550, fill = "CadetBlue1", outline = "turquoise1")
-    canvas.create_rectangle(0, 0, 800, 600, fill = "#ccffcc", outline = "#DEB887") #color=lightgreen, outline=tan
     bgImage = PhotoImage(file = "Pokedex BG copy.png")
     canvas.create_image(0, 0,anchor = NW, image = bgImage)
     
-    number = canvas.create_text(120, 35, font="Verdana 30 bold", text="#000")
+    number = canvas.create_text(120, 35, font="Verdana 30 bold", text="#000", fill = "white")
 
-    canvas.create_line(40, 60, 200, 60, width=4)
-    canvas.create_line(300, 60, 700, 60, width=3)
+    canvas.create_line(40, 60, 200, 60, width=4, fill = "white")
+    canvas.create_line(300, 60, 700, 60, width=3, fill = "white")
     
-    name = canvas.create_text(500, 35, font="Verdana 30 bold", text="Pokemon Name")
+    name = canvas.create_text(500, 35, font="Verdana 30 bold", text="Pokemon Name", fill = "white")
 
-    category = canvas.create_text(130, 120, font="Verdana 14 bold", text='')
+    category = canvas.create_text(130, 120, font="Verdana 14 bold", text='', fill = "white")
     
     image = canvas.create_image(500, 120,anchor = N, image = PhotoImage(file="Who-is-that-pokemon.png"))
 
-    canvas.create_text(60, 180, font="Verdana 12", text="Type:")
-    types = canvas.create_text(130, 180, font="Verdana 12", text="", anchor=W)
+    canvas.create_text(60, 180, font="Verdana 12", text="Type:", fill = "white")
+    types = canvas.create_text(130, 180, font="Verdana 12", text="", anchor=W, fill = "white")
     
-    canvas.create_text(70, 260, font="Verdana 12", text="Evolve\nLevel:")
-    evolve = canvas.create_text(170, 260, font="Verdana 12 italic", text='')
+    canvas.create_text(70, 260, font="Verdana 12", text="Evolve\nLevel:", fill = "white")
+    evolve = canvas.create_text(170, 260, font="Verdana 12 italic", text='', fill = "white")
     
-    canvas.create_text(70, 340, font="Verdana 12", text="Egg\nGroups:")
-    eggGroups = canvas.create_text(140, 340, font="Verdana 12 italic", text='')\
+    canvas.create_text(70, 340, font="Verdana 12", text="Egg\nGroups:", fill = "white")
+    eggGroups = canvas.create_text(140, 340, font="Verdana 12 italic", text='', fill = "white")
     
-    canvas.create_text(90, 530, font="Verdana 12", text="Pokedex\nDescription:")
-    des = canvas.create_text(430, 530, font="Verdana 12 italic", text='')
+    canvas.create_text(90, 530, font="Verdana 12", text="Pokedex\nDescription:", fill = "white")
+    des = canvas.create_text(430, 530, font="Verdana 12 italic", text='', fill = "white")
     
-    canvas.create_text(400, 580, font="Verdana 8", text="All content is owned by Nintendo, Game Freak, and The Pokemon Company")
+    canvas.create_text(400, 580, font="Verdana 8", text="All content is owned by Nintendo, Game Freak, and The Pokemon Company", fill = "white")
 #================================================
     def displayinfo(event):
         current = pokelist.curselection()
@@ -848,8 +846,10 @@ def runWindow(winWidth = 800, winHeight = 600):
             canvas.delete(number)
             canvas.delete(name)
             canvas.delete(types)
-            number = canvas.create_text(120, 35, font="Verdana 30 bold", text=pokemonList[current[0]][0])
-            name = canvas.create_text(500, 35, font="Verdana 30 bold", text=pokemonList[current[0]][1])
+            number = canvas.create_text(120, 35, font="Verdana 30 bold", text=pokemonList[current[0]][0],
+                fill = "white")
+            name = canvas.create_text(500, 35, font="Verdana 30 bold", text=pokemonList[current[0]][1],
+                fill = "white")
             
             nonlocal image
             canvas.delete(image)
@@ -861,11 +861,13 @@ def runWindow(winWidth = 800, winHeight = 600):
             else:
                 typetext = pokemonList[current[0]][2]
 
-            types = canvas.create_text(130, 180, font="Verdana 12", text=typetext, anchor=W)
+            types = canvas.create_text(130, 180, font="Verdana 12", text=typetext, anchor=W, 
+                fill = "white")
 
             nonlocal evolve
             canvas.delete(evolve)
-            evolve = canvas.create_text(170, 260, font="Verdana 12", text=eggEvolveList[current[0]][1])
+            evolve = canvas.create_text(170, 260, font="Verdana 12", text=eggEvolveList[current[0]][1],
+                fill = "white")
             
             nonlocal eggGroups
             canvas.delete(eggGroups)
@@ -875,15 +877,17 @@ def runWindow(winWidth = 800, winHeight = 600):
             else:
                 eggtext = eggEvolveList[current[0]][0]
             
-            eggGroups = canvas.create_text(140, 340, font="Verdana 12", text=eggtext, anchor=W)
+            eggGroups = canvas.create_text(140, 340, font="Verdana 12", text=eggtext, anchor=W, 
+                fill = "white")
             
             nonlocal category
             canvas.delete(category)
-            category  = canvas.create_text(130, 120, font="Verdana 14 bold", text=categoryList[current[0]])
+            category  = canvas.create_text(130, 120, font="Verdana 14 bold", text=categoryList[current[0]], fill = "white")
             
             nonlocal des
             canvas.delete(des)
-            des = canvas.create_text(430, 530, font="Verdana 12 italic", text=desList[current[0]])
+            des = canvas.create_text(430, 530, font="Verdana 12 italic", text=desList[current[0]], 
+                fill = "white")
 #================================================
     
     pokelist.bind("<<ListboxSelect>>", displayinfo)
