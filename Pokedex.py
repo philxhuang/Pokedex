@@ -28,6 +28,31 @@ pokemonList = (
 ('#020', 'Raticate', ('Normal')),
 ('#021', 'Spearow', ('Normal', 'Flying')),
 )
+
+categoryList = (
+('Seed Pokémon'),
+('Seed Pokémon'),
+('Seed Pokémon'),
+('Lizard Pokémon'),
+('Flame Pokémon'),
+('Flame Pokémon'),
+('Young Turtle \n Pokémon'),
+('Turtle Pokémon'),
+('Shell Pokémon'),
+('Caterpillar Pokémon'), #10
+('Chrysalis Pokémon'),
+('Butterfly Pokémon'),
+('Hairy Caterpillar \n Pokémon'),
+('Pupa Pokémon'),
+('Poison Bee \n Pokémon'),
+('Small Bird \n Pokémon'),
+('Bird Pokémon'),
+('Bird Pokémon'),
+('Mouse Pokémon'),
+('Mouse Pokémon'),#20
+('Small Bird \n Pokémon'),
+)
+
 desList = (
 ('For some time after its birth, it grows by \n gaining nourishment from the seed on its back.'),
 ('When the bud on its back starts swelling, \n a sweet aroma wafts to indicate the flowers coming bloom.'),
@@ -46,7 +71,7 @@ desList = (
 ('Its best attack involves flying around at high speed, \n striking with poison needles, then flying off.'),#15
 ('It is docile and prefers to avoid conflict. \n If disturbed, however, it can ferociously strike back.'),
 ('It flies over its wide territory in search of prey, \n downing it with its highly developed claws.'),
-('By flapping its wings with all its might, Pideot can \n make a gust of wind capable of bending tall trees.'),
+('It flies over its wide territory in search of prey, \n downing it with its highly developed claws.'),
 ('It searches for food all day. It gnaws on hard objects \n to wear down its fangs, which grow constantly during its lifetime.'),
 ('With its long fangs, this surprisingly violent Pokémon \n can gnaw away even thick concrete with ease.'),#20
 ('It flaps its small wings busily to fly. \n Using its beak, it searches in grass for prey.'),
@@ -57,6 +82,7 @@ def runWindow(winWidth = 800, winHeight = 600):
     root.resizable(width=False, height=False) # prevents resizing window
 
     scrollbar = Scrollbar(root, bd=0)
+    Button(root, text = "EXTERMINATE ASAP", command=root.destroy).pack()
     pokelist = Listbox(root, yscrollcommand = scrollbar.set, selectmode=BROWSE)
     for i in pokemonList:
         pokelist.insert(END, i[0] + " " + i[1])
@@ -74,16 +100,18 @@ def runWindow(winWidth = 800, winHeight = 600):
     canvas.create_rectangle(350, 50, 750, 550, fill = "CadetBlue1", outline = "turquoise1")
     canvas.create_rectangle(0, 0, 800, 600, fill = "#ccffcc", outline = "#DEB887") #color=lightgreen, outline=tan
     number = canvas.create_text(120, 35, font="Verdana 30 bold", text="#000")
-    name = canvas.create_text(500, 35, font="Verdana 30 bold", text="Pokemon Name")
+
     canvas.create_line(40, 60, 200, 60, width=4)
     canvas.create_line(300, 60, 700, 60, width=3)
     
-    canvas.create_text(60, 130, font="Verdana 12", text="Type")
-    canvas.create_text(70, 210, font="Verdana 12", text="Evolve\nLevel")
-    canvas.create_text(70, 290, font="Verdana 12", text="Egg\nGroups")
-    
-    types = canvas.create_text(80, 130, font="Verdana 12", text="")
+    name = canvas.create_text(500, 35, font="Verdana 30 bold", text="Pokemon Name")
 
+    category = canvas.create_text(130, 120, font="Verdana 14 bold", text='')
+
+    canvas.create_text(60, 180, font="Verdana 12", text="Type")
+    canvas.create_text(70, 260, font="Verdana 12", text="Evolve\nLevel")
+    canvas.create_text(70, 340, font="Verdana 12", text="Egg\nGroups")
+    
     canvas.create_text(90, 530, font="Verdana 12", text="Pokedex\nDescription")
     des = canvas.create_text(430, 530, font="Verdana 12 italic", text='')
 #================================================
@@ -92,10 +120,8 @@ def runWindow(winWidth = 800, winHeight = 600):
         if len(current) > 0:
             nonlocal number
             nonlocal name
-            nonlocal types
             canvas.delete(number)
             canvas.delete(name)
-            canvas.delete(types)
             number = canvas.create_text(120, 35, font="Verdana 30 bold", text=pokemonList[current[0]][0])
             name = canvas.create_text(500, 35, font="Verdana 30 bold", text=pokemonList[current[0]][1])
             
@@ -106,6 +132,10 @@ def runWindow(winWidth = 800, winHeight = 600):
                 typetext = pokemonList[current[0]][2]
 
             types = canvas.create_text(130, 130, font="Verdana 12", text=typetext, anchor=W)
+
+            nonlocal category
+            canvas.delete(category)
+            category  = canvas.create_text(130, 120, font="Verdana 14 bold", text=categoryList[current[0]])
             
             nonlocal des
             canvas.delete(des)
