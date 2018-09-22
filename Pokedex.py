@@ -46,7 +46,7 @@ desList = (
 ('Its best attack involves flying around at high speed, \n striking with poison needles, then flying off.'),#15
 ('It is docile and prefers to avoid conflict. \n If disturbed, however, it can ferociously strike back.'),
 ('It flies over its wide territory in search of prey, \n downing it with its highly developed claws.'),
-('It flies over its wide territory in search of prey, \n downing it with its highly developed claws.'),
+('By flapping its wings with all its might, Pideot can \n make a gust of wind capable of bending tall trees.'),
 ('It searches for food all day. It gnaws on hard objects \n to wear down its fangs, which grow constantly during its lifetime.'),
 ('With its long fangs, this surprisingly violent Pokémon \n can gnaw away even thick concrete with ease.'),#20
 ('It flaps its small wings busily to fly. \n Using its beak, it searches in grass for prey.'),
