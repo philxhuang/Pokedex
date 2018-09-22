@@ -299,7 +299,6 @@ categoryList = (
 )
 
 eggEvolveList = (
-eggEvolveList = (
 (('Monster', 'Grass'), '16'),
 (('Monster', 'Grass'), '32'),
 (('Monster', 'Grass'), 'Highest \nEvolution'),
