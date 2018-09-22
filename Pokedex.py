@@ -13,7 +13,7 @@ import copy
 from tkinter import *
 
 #========================================================List
-pokemonList = (
+pokemonList = [
 ("#001", "Bulbasaur", ("Grass", "Poison")),
 ("#002", "Ivysaur", ("Grass", "Poison")),
 ("#003", "Venusaur", ("Grass", "Poison")),
@@ -165,7 +165,7 @@ pokemonList = (
 ('#149', 'Dragonite', ('Dragonite', 'Flying')),
 ('#150', 'Mewtwo', ('Psychic')),
 ('#151', 'Mew', ('Psychic'))
-)
+]
 
 
 categoryList = (
@@ -800,10 +800,28 @@ def runWindow(winWidth = 800, winHeight = 600):
     for i in pokemonList:
         pokelist.insert(END, i[0] + " " + i[1])
     scrollbar.config(command=pokelist.yview)
+    
+    
     scrollbar.pack(side=LEFT, fill=Y)
     pokelist.pack(side=LEFT, fill=Y)
 
 #=================================================Aesthetics
+    def filtertext(self, *args):
+        nonlocal narrow
+        pokelist.delete(0, END)
+        for i in pokemonList:
+            if narrow.get().lower() in i[1].lower():
+                pokelist.insert(END, i[0] + " " + i[1])
+
+#===============================================================
+    
+    narrow = StringVar()
+    narrow.set("")
+    narrow.trace("w", filtertext)
+    textfilter = Entry(root, textvariable=narrow)
+    #l = Label(textfilter, text="Filter by name")
+    #l.pack()
+    textfilter.pack()
 
     canvas = Canvas(root, width=winWidth, height=winHeight)
     canvas.configure(bd=0, highlightthickness=0)
@@ -837,57 +855,70 @@ def runWindow(winWidth = 800, winHeight = 600):
     
     canvas.create_text(400, 580, font="Verdana 8", text="All content is owned by Nintendo, Game Freak, and The Pokemon Company", fill = "white")
 #================================================
+    def findpokemon():
+        curselect = pokelist.curselection()[0]
+        pokeindex = -1
+        for i in range(len(pokemonList)):
+            if pokelist.get(curselect)[:4] == pokemonList[i][0]:
+                pokeindex = i
+                break
+        return pokeindex
+            
+#================================================
     def displayinfo(event):
-        current = pokelist.curselection()
-        if len(current) > 0:
-            nonlocal number
-            nonlocal name
-            nonlocal types
-            canvas.delete(number)
-            canvas.delete(name)
-            canvas.delete(types)
-            number = canvas.create_text(120, 35, font="Verdana 30 bold", text=pokemonList[current[0]][0],
-                fill = "white")
-            name = canvas.create_text(500, 35, font="Verdana 30 bold", text=pokemonList[current[0]][1],
-                fill = "white")
-            
-            nonlocal image
-            canvas.delete(image)
-            image = canvas.create_image(500, 120,anchor = N, image = pokemonImages[current[0]])
-            
-            typetext = ""
-            if len(pokemonList[current[0]][2]) == 2:
-                typetext = pokemonList[current[0]][2][0] + "/" + pokemonList[current[0]][2][1]
-            else:
-                typetext = pokemonList[current[0]][2]
+        current = findpokemon()
+        if(current == -1):
+            return
+        
+    
+        nonlocal number
+        nonlocal name
+        nonlocal types
+        canvas.delete(number)
+        canvas.delete(name)
+        canvas.delete(types)
+        number = canvas.create_text(120, 35, font="Verdana 30 bold", text=pokemonList[current][0],
+            fill = "white")
+        name = canvas.create_text(500, 35, font="Verdana 30 bold", text=pokemonList[current][1],
+            fill = "white")
+        
+        nonlocal image
+        canvas.delete(image)
+        image = canvas.create_image(500, 120,anchor = N, image = pokemonImages[current])
+        
+        typetext = ""
+        if len(pokemonList[current][2]) == 2:
+            typetext = pokemonList[current][2][0] + "/" + pokemonList[current][2][1]
+        else:
+            typetext = pokemonList[current][2]
 
-            types = canvas.create_text(130, 180, font="Verdana 12", text=typetext, anchor=W, 
-                fill = "white")
+        types = canvas.create_text(130, 180, font="Verdana 12", text=typetext, anchor=W, 
+            fill = "white")
 
-            nonlocal evolve
-            canvas.delete(evolve)
-            evolve = canvas.create_text(170, 260, font="Verdana 12", text=eggEvolveList[current[0]][1],
-                fill = "white")
-            
-            nonlocal eggGroups
-            canvas.delete(eggGroups)
-            eggtext = ""
-            if len(eggEvolveList[current[0]][0]) == 2:
-                eggtext = eggEvolveList[current[0]][0][0] + "/" + eggEvolveList[current[0]][0][1]
-            else:
-                eggtext = eggEvolveList[current[0]][0]
-            
-            eggGroups = canvas.create_text(140, 340, font="Verdana 12", text=eggtext, anchor=W, 
-                fill = "white")
-            
-            nonlocal category
-            canvas.delete(category)
-            category  = canvas.create_text(130, 120, font="Verdana 14 bold", text=categoryList[current[0]], fill = "white")
-            
-            nonlocal des
-            canvas.delete(des)
-            des = canvas.create_text(430, 530, font="Verdana 12 italic", text=desList[current[0]], 
-                fill = "white")
+        nonlocal evolve
+        canvas.delete(evolve)
+        evolve = canvas.create_text(170, 260, font="Verdana 12", text=eggEvolveList[current][1],
+            fill = "white")
+        
+        nonlocal eggGroups
+        canvas.delete(eggGroups)
+        eggtext = ""
+        if len(eggEvolveList[current][0]) == 2:
+            eggtext = eggEvolveList[current][0][0] + "/" + eggEvolveList[current][0][1]
+        else:
+            eggtext = eggEvolveList[current][0]
+        
+        eggGroups = canvas.create_text(140, 340, font="Verdana 12", text=eggtext, anchor=W, 
+            fill = "white")
+        
+        nonlocal category
+        canvas.delete(category)
+        category  = canvas.create_text(130, 120, font="Verdana 14 bold", text=categoryList[current], fill = "white")
+        
+        nonlocal des
+        canvas.delete(des)
+        des = canvas.create_text(430, 530, font="Verdana 12 italic", text=desList[current], 
+            fill = "white")
 #================================================
     
     pokelist.bind("<<ListboxSelect>>", displayinfo)
