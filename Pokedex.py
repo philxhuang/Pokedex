@@ -14,7 +14,19 @@ pokemonList = (
 ("#006", "Charizarad", ("Fire", "Flying")),
 ("#007", "Squirtle", ("Water")),
 ("#008", "Wartotle", ("Water")),
-("#009", "Blastoise", ("Water"))
+("#009", "Blastoise", ("Water")),
+('#010', 'Caterpie', ('Bug')),
+('#011', 'Metapod', ('Bug')),
+('#012', 'Butterfree', ('Bug',	'Flying')),
+('#013', 'Weedle', ('Bug', 'Poison')),
+('#014', 'Kakuna', ('Bug', 'Poison')),
+('#015', 'Beedrill', ('Bug', 'Poison')),
+('#016', 'Pidgey', ('Normal', 'Flying')),
+('#017', 'Pidgeotto', ('Normal', 'Flying')),
+('#018', 'Pidgeot', ('Normal', 'Flying')),
+('#019', 'Rattata', ('Normal')),
+('#020', 'Raticate', ('Normal')),
+('#021', 'Spearow', ('Normal', 'Flying')),
 )
 #===============================================================
 def runWindow(winWidth = 800, winHeight = 600):
