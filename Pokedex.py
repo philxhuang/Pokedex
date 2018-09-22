@@ -535,6 +535,8 @@ def runWindow(winWidth = 800, winHeight = 600):
     name = canvas.create_text(500, 35, font="Verdana 30 bold", text="Pokemon Name")
 
     category = canvas.create_text(130, 120, font="Verdana 14 bold", text='')
+    
+    image = canvas.create_image(500, 120,anchor = N, image = "Who-is-that-pokemon.png")
 
     canvas.create_text(60, 180, font="Verdana 12", text="Type")
     types = canvas.create_text(130, 180, font="Verdana 12", text="", anchor=W)
@@ -560,7 +562,9 @@ def runWindow(winWidth = 800, winHeight = 600):
             number = canvas.create_text(120, 35, font="Verdana 30 bold", text=pokemonList[current[0]][0])
             name = canvas.create_text(500, 35, font="Verdana 30 bold", text=pokemonList[current[0]][1])
             
-            canvas.create_image(500, 120,anchor = N, image = pokemonImages[current[0]])
+            nonlocal image
+            canvas.delete(image)
+            image = canvas.create_image(500, 120,anchor = N, image = pokemonImages[current[0]])
             
             typetext = ""
             if len(pokemonList[current[0]][2]) == 2:
