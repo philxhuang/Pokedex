@@ -83,9 +83,6 @@ def runWindow(winWidth = 800, winHeight = 600):
     canvas.create_text(70, 290, font="Verdana 12", text="Egg\nGroups")
     
     types = canvas.create_text(80, 130, font="Verdana 12", text="")
-    
-    canvas.create_text(90, 520, font="Verdana 12", text="Pokedex\nDescription")
-    des = canvas.create_text(420, 520, font="Verdana 14 italic", text='')
 
     canvas.create_text(90, 530, font="Verdana 12", text="Pokedex\nDescription")
     des = canvas.create_text(430, 530, font="Verdana 12 italic", text='')
