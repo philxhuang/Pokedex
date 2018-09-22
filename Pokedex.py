@@ -9,13 +9,8 @@ def runWindow(winWidth = 800, winHeight = 800):
     root.resizable(width=False, height=False) # prevents resizing window
     scrollbar = Scrollbar(root, bd=0)
     pokelist = Listbox(root, yscrollcommand = scrollbar.set, selectmode=BROWSE)
-    pokelist.insert(END, "001", "Bulbasaur")
-    pokelist.insert(END, "001", "Bulbasaur")
-    pokelist.insert(END, "001", "Bulbasaur")
-    pokelist.insert(END, "001", "Bulbasaur")
-    pokelist.insert(END, "001", "Bulbasaur")
-    pokelist.insert(END, "001", "Bulbasaur")
-    pokelist.insert(END, "001", "Bulbasaur")
+    for i in range(100):
+        pokelist.insert(END, str(i), "Bulbasaur")
     scrollbar.config(command=pokelist.yview)
     scrollbar.pack(side=LEFT, fill=Y)
     pokelist.pack(side=LEFT, fill=Y)
