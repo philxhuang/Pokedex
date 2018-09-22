@@ -22,6 +22,5 @@ if __name__ == '__main__':
 
 
 '''
-#001 Bulbasaur Grass/Poison Green
 
 '''
