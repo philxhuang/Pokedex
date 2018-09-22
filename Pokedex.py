@@ -1,7 +1,11 @@
 #################################################
 # rock_paper_scissors.py
 #################################################
-#Hello fellow hAcKErS, this is eRiC LIu
+"""I wanna be the very best
+Like no one ever was
+To catch them is my real test
+To train them is my cause"""
+
 import random
 from tkinker import *
 
