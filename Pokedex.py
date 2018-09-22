@@ -184,6 +184,30 @@ categoryList = (
 ('Small Bird \n Pokémon'),
 )
 
+eggEvolveList = (
+(('Monster', 'Grass'), '16'),
+(('Monster', 'Grass'), '32'),
+(('Monster', 'Grass'), 'Highest \nEvolution'),
+(('Monster', 'Dragon'), '16'),
+(('Monster', 'Dragon'), '36'),
+(('Monster', 'Dragon'), 'Highest \nEvolution'),
+(('Monster', 'Water 1'), '16'),
+(('Monster', 'Water 1'), '36'),
+(('Monster', 'Water 1'), 'Highest \nEvolution'),
+(('Bug'), '7'), #10
+(('Bug'), '10'),
+(('Bug'), 'Highest \nEvolution'),
+(('Bug'), '7'),
+(('Bug'), '10'),
+(('Bug'), 'Highest \nEvolution'),
+(('Flying'), '18'),
+(('Flying'), '36'),
+(('Flying'), 'Highest \nEvolution'),
+(('Field'), '20'),
+(('Field'), 'Highest \nEvolution'), #20
+(('Flying'), '20')
+)
+
 desList = (
 ('For some time after its birth, it grows by \n gaining nourishment from the seed on its back.'),
 ('When the bud on its back starts swelling, \n a sweet aroma wafts to indicate the flowers coming bloom.'),
@@ -403,7 +427,10 @@ def runWindow(winWidth = 800, winHeight = 600):
     types = canvas.create_text(130, 180, font="Verdana 12", text="", anchor=W)
     
     canvas.create_text(70, 260, font="Verdana 12", text="Evolve\nLevel")
+    evolve = canvas.create_text(170, 260, font="Verdana 12 italic", text='')
+    
     canvas.create_text(70, 340, font="Verdana 12", text="Egg\nGroups")
+    eggGroups = canvas.create_text(140, 340, font="Verdana 12 italic", text='')\
     
     canvas.create_text(90, 530, font="Verdana 12", text="Pokedex\nDescription")
     des = canvas.create_text(430, 530, font="Verdana 12 italic", text='')
@@ -430,6 +457,20 @@ def runWindow(winWidth = 800, winHeight = 600):
 
             types = canvas.create_text(130, 180, font="Verdana 12", text=typetext, anchor=W)
 
+            nonlocal evolve
+            canvas.delete(evolve)
+            evolve = canvas.create_text(170, 260, font="Verdana 12", text=eggEvolveList[current[0]][1])
+            
+            nonlocal eggGroups
+            canvas.delete(eggGroups)
+            eggtext = ""
+            if len(eggEvolveList[current[0]][0]) == 2:
+                eggtext = eggEvolveList[current[0]][0][0] + "/" + eggEvolveList[current[0]][0][1]
+            else:
+                eggtext = eggEvolveList[current[0]][0]
+            
+            eggGroups = canvas.create_text(140, 340, font="Verdana 12", text=eggtext, anchor=W)
+            
             nonlocal category
             canvas.delete(category)
             category  = canvas.create_text(130, 120, font="Verdana 14 bold", text=categoryList[current[0]])
