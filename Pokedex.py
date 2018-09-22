@@ -28,6 +28,12 @@ pokemonList = (
 ('#020', 'Raticate', ('Normal')),
 ('#021', 'Spearow', ('Normal', 'Flying')),
 )
+desList = (
+('For some time after its birth, it grows by \n gaining nourishment from the seed on its back.'),
+('When the bud on its back starts swelling, a sweet aroma wafts to indicate the flowers coming bloom.'),
+('After a rainy day, the flower on its back smells stronger. The scent attracts other Pokémon.'),
+
+)
 #===============================================================
 def runWindow(winWidth = 800, winHeight = 600):
     root = Tk()
@@ -64,12 +70,12 @@ def runWindow(winWidth = 800, winHeight = 600):
     def displayinfo(event):
         current = pokelist.curselection()
         if len(current) > 0:
-            nonlocal number
-            nonlocal name
             canvas.delete(number)
             canvas.delete(name)
             number = canvas.create_text(120, 35, font="Verdana 30 bold", text=pokemonList[current[0]][0])
             name = canvas.create_text(500, 35, font="Verdana 30 bold", text=pokemonList[current[0]][1])
+            
+            canvas.create_text(420, 520, font="Verdana 14 italic", text=desList[current[0]])
 #================================================
     
     pokelist.bind("<<ListboxSelect>>", displayinfo)
@@ -80,30 +86,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-
-'''
-151 Pokemons
-=======
-#001 Bulbasaur Grass	Poison
-#002 Ivysaur Grass	Poison
-#003 Venusaur Grass	Poison
-#004 Charmander Fire
-#005 Charmeleon Fire
-#006 Charizard Fire	Flying
-#007 Squirtle Water
-#008 Wartortle Water
-#009 Blastoise Water
-#010 Caterpie Bug
-#011 Metapod Bug
-#012 Butterfree Bug	Flying
-#013 Weedle Bug	Poison
-#014 Kakuna Bug	Poison
-#015 Beedrill Bug Poison
-#016 Pidgey Normal Flying
-#017 Pidgeotto Normal Flying
-#018 Pidgeot Normal	Flying
-#019 Rattata Normal
-#020 Raticate Normal
-#021 Spearow Normal	Flying
-'''
