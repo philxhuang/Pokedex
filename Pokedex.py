@@ -3,6 +3,7 @@
 #################################################
 #Hello fellow hAcKErS, this is eRiC LIu
 import random
+from tkinker import *
 
 def runWindow(winWidth=500, winHeight=500):
     root = Tk()
