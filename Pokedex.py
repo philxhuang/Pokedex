@@ -268,34 +268,51 @@ categoryList = (
 ('Lonely Pokémon'),
 ('Bone Lover Pokémon'),#105
 ('Kick Pokémon'),
-(''),
-(''),
-(''),
-(''),
-(''),
-(''),
-(''),
-(''),
-(''),
-(''),
-(''),
-(''),
-(''),
-(''),
-(''),
-(''),
-(''),
-(''),
-(''),
-(''),
-(''),
-(''),
-(''),
-(''),
-(''),
-(''),
-(''),
-(''),
+('Punch Pokémon'),
+('Licking Pokémon'),
+('Poison Gas Pokémon'),
+('Poison Gas Pokémon'), #110
+('Spikes Pokémon'),
+('Drill Pokémon'),
+('Egg Pokémon'),
+('Vine Pokémon'),
+('Parent Pokémon'), #115
+('Dragon Pokémon'),
+('Dragon Pokémon'),
+('Goldfish Pokémon'),
+('Goldfish Pokémon'),
+('Star Shape Pokémon'), #120
+('Mysterious Pokémon'),
+('Barrier Pokémon'),
+('Mantis Pokémon'),
+('Human Shape Pokémon'),
+('Electric Pokémon'), #125
+('Spitfire Pokémon'),
+('Stag Beetle Pokémon'),
+('Wild Bull Pokémon'),
+('Fish Pokémon'),
+('Atrocius Pokémon'), #130
+('Transport Pokémon'),
+('Transform Pokémon'),
+('Evolution Pokémon'),
+('Bubble Jet Pokémon'),
+('Lightning Pokémon'), #135
+('Flame Pokémon'), 
+('Virtual Pokémon'),
+('Spiral Pokémon'),
+('Spiral Pokémon'),
+('Shellfish Pokémon'), #140
+('Shellfish Pokémon'), 
+('Fossil Pokémon'),
+('Sleeping Pokémon'),
+('Freeze Pokémon'),
+('Electric Pokémon'), #145
+('Flame Pokémon'), 
+('Dragon Pokémon'),
+('Dragon Pokémon'),
+('Dragon Pokémon'),
+('Genetic Pokémon'), #150
+('New Species Pokémon')
 )
 
 eggEvolveList = (
@@ -436,7 +453,6 @@ eggEvolveList = (
 (('Field'), 'Highest \nEvolution'),
 (('Field'), 'Highest \nEvolution'),
 (('Mineral'), 'Highest \nEvolution'),
-(('Field'), '22'),
 (('Water 1', 'Water 3'), '40'),
 (('Water 1', 'Water 3'), 'Highest \nEvolution'),
 (('Water 1', 'Water 3'), '40'), #140
@@ -471,11 +487,11 @@ desList = (
 ('Its best attack involves flying around at high speed, \n striking with poison needles, then flying off.'),#15
 ('It is docile and prefers to avoid conflict. \n If disturbed, however, it can ferociously strike back.'),
 ('It flies over its wide territory in search of prey, \n downing it with its highly developed claws.'),
-('It flies over its wide territory in search of prey, \n downing it with its highly developed claws.'),
+('By flapping its wings with all its might, Pidgeot can\n make a gust of wind capable of bending tall trees.'),
 ('It searches for food all day. It gnaws on hard objects \n to wear down its fangs, which grow constantly during its lifetime.'),
 ('With its long fangs, this surprisingly violent Pokémon \n can gnaw away even thick concrete with ease.'),#20
 ('It flaps its small wings busily to fly. \n Using its beak, it searches in grass for prey.'),
-('It flaps its small wings busily to fly. \n Using its beak, it searches in grass for prey.'),
+('It has the stamina to fly all day on its \nbroad wings. It fights by using its sharp beak.'),
 ('It sneaks through grass without making a sound \n and strikes unsuspecting prey from behind.'),
 ('The pattern on its belly is for intimidation. \n It constricts foes while they are frozen in fear.'),
 ('It occasionally uses an electric shock to recharge \n a fellow Pikachu that is in a weakened state.'), #25
@@ -484,7 +500,7 @@ desList = (
 ('The spikes on its body are made up of its hardened hide. \n It rolls up and attacks foes with its spikes.'),
 ('While it does not prefer to fight, even one drop of \n the poison it secretes from barbs can be fatal.'),
 ('When it senses danger, it raises all the barbs on its body. \n These barbs grow slower than Nidorinos.'),#30
-('Its entire body is armored with hard scales. n\ It will protect the young in its burrow with its life.'),
+('Its entire body is armored with hard scales. \n It will protect the young in its burrow with its life.'),
 ('It scans its surroundings by raising its ears out \n of the grass. Its toxic horn is for protection.'),
 ('It has a violent disposition and stabs foes \n with its horn, which oozes poison upon impact.'),
 ('One swing of its mighty tail can snap a \n telephone pole as if it were a matchstick.'),
@@ -553,12 +569,12 @@ desList = (
 ('Seeing its swinging pendulum can induce sleep in \n three seconds, even in someone who just woke up.'),
 ('It lives in burrows dug on sandy beaches. Its pincers \n fully grow back if they are broken in battle.'),
 ('The larger pincer has 10,000- horsepower strength. \n However, it is so heavy, it is difficult to aim.'),
-('It looks just like a Pok Ball. It is dangerous \n because it may electrocute or explode on contact.'),#100
+('It looks just like a Poke Ball. It is dangerous \n because it may electrocute or explode on contact.'),#100
 ('It is known to drift on winds if it is bloated \n to bursting with stored electricity.'),
 ('Its six eggs converse using telepathy. \n They can quickly gather if they become separated.'),
 ('It is called The Walking Jungle. If a head grows too big, \n it falls off and becomes an Exeggcute.'),
 ('When it thinks of its dead mother, it cries. \n Its crying makes the skull it wears rattle hollowly.'),
-('From its birth, this savage Pokémon constantly holds bones. It is skilled in using them as weapons.'),#105
+('From its birth, this savage Pokémon constantly \nholds bones. It is skilled in using them as weapons.'),#105
 ('Its legs can stretch double. First-time \n foes are startled by its extensible reach.'),
 ('The arm-twisting punches it throws pulverize even concrete. \n It rests after three minutes of fighting.'),
 ('Being licked by its long, saliva-covered tongue leaves a \n tingling sensation. Extending its tongue retracts its tail.'),
