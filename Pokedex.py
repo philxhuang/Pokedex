@@ -35,29 +35,26 @@ if __name__ == '__main__':
 
 
 '''
-
 151 Pokemons
 =======
-#001	Bulbasaur Grass	Poison
-#002	Ivysaur Grass	Poison
-#003	Venusaur Grass	Poison
-#004	#004	Charmander Fire
-#005	#005	Charmeleon Fire
-#006	#006	Charizard Fire	Flying
-#007	#007	Squirtle Water
-#008	#008	Wartortle Water
-#009	#009	Blastoise Water
-#010	#010	Caterpie Bug
-#011	#011	Metapod	 Bug
-#012	#012	Butterfree Bug	Flying
-#013	#013	Weedle Bug	Poison
-#014	#014	Kakuna Bug	Poison
-#015	#015	Beedrill Bug	Poison
-#016	#016	Pidgey Normal	Flying
-#017	#017	Pidgeotto Normal	Flying
-#018	#018	Pidgeot Normal	Flying
-#019	#019	Rattata Normal
-#020	#020	Raticate Normal
-#021	#021	Spearow Normal	Flying
-
-'''
+#001 Bulbasaur Grass	Poison
+#002 Ivysaur Grass	Poison
+#003 Venusaur Grass	Poison
+#004 Charmander Fire
+#005 Charmeleon Fire
+#006 Charizard Fire	Flying
+#007 Squirtle Water
+#008 Wartortle Water
+#009 Blastoise Water
+#010 Caterpie Bug
+#011 Metapod Bug
+#012 Butterfree Bug	Flying
+#013 Weedle Bug	Poison
+#014 Kakuna Bug	Poison
+#015 Beedrill Bug Poison
+#016 Pidgey Normal Flying
+#017 Pidgeotto Normal Flying
+#018 Pidgeot Normal	Flying
+#019 Rattata Normal
+#020 Raticate Normal
+#021 Spearow Normal	Flying '''
