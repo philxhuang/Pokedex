@@ -795,7 +795,7 @@ def runWindow(winWidth = 800, winHeight = 600):
     loadImages()
 
     scrollbar = Scrollbar(root, bd=0)
-    Button(root, text = "CLOSE THE POKEDEX", command=root.destroy).pack()
+    Button(root, text = "CLOSE THE POKEDEX", command=root.destroy).pack(fill=X)
     pokelist = Listbox(root, yscrollcommand = scrollbar.set, selectmode=BROWSE)
     for i in pokemonList:
         pokelist.insert(END, i[0] + " " + i[1])
@@ -853,7 +853,7 @@ def runWindow(winWidth = 800, winHeight = 600):
             
             nonlocal image
             canvas.delete(image)
-            image = canvas.create_image(500, 120,anchor = N, image = pokemonImages[current[0]])
+            image = canvas.create_image(500, 120,anchor = N, image = pokemonImages[current[0]].zoom(5))
             
             typetext = ""
             if len(pokemonList[current[0]][2]) == 2:
