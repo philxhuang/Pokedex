@@ -125,6 +125,14 @@ def runWindow(winWidth = 800, winHeight = 600):
             number = canvas.create_text(120, 35, font="Verdana 30 bold", text=pokemonList[current[0]][0])
             name = canvas.create_text(500, 35, font="Verdana 30 bold", text=pokemonList[current[0]][1])
             
+            typetext = ""
+            if len(pokemonList[current[0]][2]) == 2:
+                typetext = pokemonList[current[0]][2][0] + "/" + pokemonList[current[0]][2][1]
+            else:
+                typetext = pokemonList[current[0]][2]
+
+            types = canvas.create_text(130, 130, font="Verdana 12", text=typetext, anchor=W)
+
             nonlocal category
             canvas.delete(category)
             category  = canvas.create_text(130, 120, font="Verdana 14 bold", text=categoryList[current[0]])
