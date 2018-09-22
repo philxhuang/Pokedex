@@ -40,7 +40,7 @@ if __name__ == '__main__':
 =======
 #001	Bulbasaur Grass	Poison
 #002	Ivysaur Grass	Poison
-#003	#003	Venusaur Grass	Poison
+#003	Venusaur Grass	Poison
 #004	#004	Charmander Fire
 #005	#005	Charmeleon Fire
 #006	#006	Charizard Fire	Flying
