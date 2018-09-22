@@ -5,6 +5,13 @@ import copy
 
 from tkinter import *
 
+#==============================import math
+import string
+import copy
+#whoa
+
+from tkinter import *
+
 #========================================================List
 pokemonList = (
 ("#001", "Bulbasaur", ("Grass", "Poison")),
@@ -829,6 +836,8 @@ def runWindow(winWidth = 800, winHeight = 600):
     
     canvas.create_text(90, 530, font="Verdana 12", text="Pokedex\nDescription:")
     des = canvas.create_text(430, 530, font="Verdana 12 italic", text='')
+    
+    canvas.create_text(400, 580, font="Verdana 8", text="All content is owned by Nintendo, Game Freak, and The Pokemon Company")
 #================================================
     def displayinfo(event):
         current = pokelist.curselection()
