@@ -82,6 +82,11 @@ def runWindow(winWidth = 800, winHeight = 600):
     canvas.create_text(70, 210, font="Verdana 12", text="Evolve\nLevel")
     canvas.create_text(70, 290, font="Verdana 12", text="Egg\nGroups")
     
+    types = canvas.create_text(80, 130, font="Verdana 12", text="")
+    
+    canvas.create_text(90, 520, font="Verdana 12", text="Pokedex\nDescription")
+    des = canvas.create_text(420, 520, font="Verdana 14 italic", text='')
+
     canvas.create_text(90, 530, font="Verdana 12", text="Pokedex\nDescription")
     des = canvas.create_text(430, 530, font="Verdana 12 italic", text='')
 #================================================
@@ -90,10 +95,20 @@ def runWindow(winWidth = 800, winHeight = 600):
         if len(current) > 0:
             nonlocal number
             nonlocal name
+            nonlocal types
             canvas.delete(number)
             canvas.delete(name)
+            canvas.delete(types)
             number = canvas.create_text(120, 35, font="Verdana 30 bold", text=pokemonList[current[0]][0])
             name = canvas.create_text(500, 35, font="Verdana 30 bold", text=pokemonList[current[0]][1])
+            
+            typetext = ""
+            if len(pokemonList[current[0]][2]) == 2:
+                typetext = pokemonList[current[0]][2][0] + "/" + pokemonList[current[0]][2][1]
+            else:
+                typetext = pokemonList[current[0]][2]
+
+            types = canvas.create_text(150, 130, font="Verdana 12", text=typetext)
             
             nonlocal des
             canvas.delete(des)
