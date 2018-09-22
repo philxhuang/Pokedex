@@ -3,6 +3,7 @@ import string
 import copy
 
 from tkinter import *
+from PIL import Image, ImageTk
 
 #========================================================List
 pokemonList = (
