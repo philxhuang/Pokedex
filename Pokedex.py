@@ -583,7 +583,7 @@ def loadImages():
     pokemonImages.append(PhotoImage(file = "exeggcute.gif"))
     pokemonImages.append(PhotoImage(file = "exeggutor.gif"))
     pokemonImages.append(PhotoImage(file = "cubone.gif"))
-    pokemonImages.append(PhotoImage(file = "marowak")) #105
+    pokemonImages.append(PhotoImage(file = "marowak.gif")) #105
     pokemonImages.append(PhotoImage(file = "hitmonlee.gif"))
     pokemonImages.append(PhotoImage(file = "hitmonchan.gif"))
     pokemonImages.append(PhotoImage(file = "lickitung.gif"))
