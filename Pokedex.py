@@ -4,6 +4,7 @@ import copy
 
 from tkinter import *
 
+#========================================================List
 pokemonList = (
 ("#001", "Bulbasaur", ("Grass", "Poison")),
 ("#002", "Ivysaur", ("Grass", "Poison")),
@@ -15,11 +16,10 @@ pokemonList = (
 ("#008", "Wartotle", ("Water")),
 ("#009", "Blastoise", ("Water"))
 )
-
+#===============================================================
 def runWindow(winWidth = 800, winHeight = 600):
     root = Tk()
     root.resizable(width=False, height=False) # prevents resizing window
-    root.title("Pokedex")
 
     scrollbar = Scrollbar(root, bd=0)
     pokelist = Listbox(root, yscrollcommand = scrollbar.set, selectmode=BROWSE)
@@ -31,16 +31,18 @@ def runWindow(winWidth = 800, winHeight = 600):
 
     root["bg"] = "SlateGray1"
 
+#=================================================Asthetics
     canvas = Canvas(root, width=winWidth, height=winHeight)
     canvas.configure(bd=0, highlightthickness=0)
     canvas.pack(side=RIGHT, fill=BOTH)
     
     canvas.create_rectangle(350, 50, 750, 550, fill = "CadetBlue1", outline = "turquoise1")
     canvas.create_rectangle(0, 0, 800, 600, fill = "#ccffcc", outline = "#DEB887") #color=lightgreen, outline=tan
-    canvas.create_text(120, 40, font="Verdana 24 bold", text=pokemonList[0][0])
-    canvas.create_text(500, 40, font="Verdana 24 bold", text=pokemonList[0][1])
+    canvas.create_text(120, 35, font="Verdana 30 bold", text=pokemonList[0][0])
+    canvas.create_text(500, 35, font="Verdana 30 bold", text=pokemonList[0][1])
     canvas.create_line(40, 60, 200, 60, width=4)
     canvas.create_line(300, 60, 700, 60, width=3)
+#================================================
     
     root.mainloop()
 
