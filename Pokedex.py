@@ -4,7 +4,7 @@ import copy
 
 from tkinter import *
 
-pokemonList = {
+pokemonList = (
 ("#001", "Bulbasaur", ("Grass", "Poison")),
 ("#002", "Ivysaur", ("Grass", "Poison")),
 ("#003", "Venusaur", ("Grass", "Poison")),
@@ -14,7 +14,7 @@ pokemonList = {
 ("#007", "Squirtle", ("Water")),
 ("#008", "Wartotle", ("Water")),
 ("#009", "Blastoise", ("Water"))
-}
+)
 
 def runWindow(winWidth = 800, winHeight = 600):
     root = Tk()
