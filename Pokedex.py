@@ -817,16 +817,16 @@ def runWindow(winWidth = 800, winHeight = 600):
     
     image = canvas.create_image(500, 120,anchor = N, image = PhotoImage(file="Who-is-that-pokemon.png"))
 
-    canvas.create_text(60, 180, font="Verdana 12", text="Type")
+    canvas.create_text(60, 180, font="Verdana 12", text="Type:")
     types = canvas.create_text(130, 180, font="Verdana 12", text="", anchor=W)
     
-    canvas.create_text(70, 260, font="Verdana 12", text="Evolve\nLevel")
+    canvas.create_text(70, 260, font="Verdana 12", text="Evolve\nLevel:")
     evolve = canvas.create_text(170, 260, font="Verdana 12 italic", text='')
     
-    canvas.create_text(70, 340, font="Verdana 12", text="Egg\nGroups")
+    canvas.create_text(70, 340, font="Verdana 12", text="Egg\nGroups:")
     eggGroups = canvas.create_text(140, 340, font="Verdana 12 italic", text='')\
     
-    canvas.create_text(90, 530, font="Verdana 12", text="Pokedex\nDescription")
+    canvas.create_text(90, 530, font="Verdana 12", text="Pokedex\nDescription:")
     des = canvas.create_text(430, 530, font="Verdana 12 italic", text='')
 #================================================
     def displayinfo(event):
