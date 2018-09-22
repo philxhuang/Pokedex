@@ -19,6 +19,7 @@ pokemonList = (
 def runWindow(winWidth = 800, winHeight = 600):
     root = Tk()
     root.resizable(width=False, height=False) # prevents resizing window
+    root.title("Pokedex")
 
     scrollbar = Scrollbar(root, bd=0)
     pokelist = Listbox(root, yscrollcommand = scrollbar.set, selectmode=BROWSE)
