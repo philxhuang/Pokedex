@@ -105,7 +105,7 @@ def runWindow(winWidth = 800, winHeight = 600):
             else:
                 typetext = pokemonList[current[0]][2]
 
-            types = canvas.create_text(150, 130, font="Verdana 12", text=typetext)
+            types = canvas.create_text(130, 130, font="Verdana 12", text=typetext, anchor=W)
             
             nonlocal des
             canvas.delete(des)
