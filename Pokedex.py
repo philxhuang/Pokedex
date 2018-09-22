@@ -36,6 +36,8 @@ def runWindow(winWidth = 800, winHeight = 600):
     
     canvas.create_rectangle(350, 50, 750, 550, fill = "CadetBlue1", outline = "turquoise1")
     canvas.create_rectangle(0, 0, 800, 600, fill = "#ccffcc", outline = "#DEB887") #color=lightgreen, outline=tan
+    canvas.create_text(120, 40, font="Verdana 24 bold", text=pokemonList[0][0])
+    canvas.create_text(500, 40, font="Verdana 24 bold", text=pokemonList[0][1])
     canvas.create_line(40, 60, 200, 60, width=4)
     canvas.create_line(300, 60, 700, 60, width=3)
     
