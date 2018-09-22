@@ -11,9 +11,9 @@ pokemonList = (
 ("#003", "Venusaur", ("Grass", "Poison")),
 ("#004", "Charmander", ("Fire")),
 ("#005", "Charmeleon", ("Fire")),
-("#006", "Charizard", ("Fire", "Flying")),
+("#006", "Charizarad", ("Fire", "Flying")),
 ("#007", "Squirtle", ("Water")),
-("#008", "Wartortle", ("Water")),
+("#008", "Wartotle", ("Water")),
 ("#009", "Blastoise", ("Water")),
 ('#010', 'Caterpie', ('Bug')),
 ('#011', 'Metapod', ('Bug')),
@@ -66,16 +66,21 @@ def runWindow(winWidth = 800, winHeight = 600):
     canvas.create_text(70, 290, font="Verdana 12", text="Egg\nGroups")
     
     canvas.create_text(90, 520, font="Verdana 12", text="Pokedex\nDescription")
+    des = canvas.create_text(420, 520, font="Verdana 14 italic", text='')
 #================================================
     def displayinfo(event):
         current = pokelist.curselection()
         if len(current) > 0:
+            nonlocal number
+            nonlocal name
             canvas.delete(number)
             canvas.delete(name)
             number = canvas.create_text(120, 35, font="Verdana 30 bold", text=pokemonList[current[0]][0])
             name = canvas.create_text(500, 35, font="Verdana 30 bold", text=pokemonList[current[0]][1])
             
-            canvas.create_text(420, 520, font="Verdana 14 italic", text=desList[current[0]])
+            nonlocal des
+            canvas.delete(des)
+            des = canvas.create_text(420, 520, font="Verdana 14 italic", text=desList[current[0]])
 #================================================
     
     pokelist.bind("<<ListboxSelect>>", displayinfo)
