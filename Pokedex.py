@@ -3,7 +3,6 @@ import string
 import copy
 
 from tkinter import *
-from PIL import Image, ImageTk
 
 #========================================================List
 pokemonList = (
@@ -183,6 +182,119 @@ categoryList = (
 ('Mouse Pokémon'),
 ('Mouse Pokémon'),#20
 ('Small Bird \n Pokémon'),
+('Beak Pokémon'),
+('Snake Pokémon'),
+('Cobra Pokémon'),
+('Mouse Pokémon'),#25
+('Mouse Pokémon'),
+('Mouse Pokémon'),
+('Mouse Pokémon'),
+('Poison Needle Pokémon'),
+('Poison Needle Pokémon'),#30
+('Drill Pokémon'),
+('Poison Needle Pokémon'),
+('Poison Needle Pokémon'),
+('Drill Pokémon'),
+('Fairy Pokémon'),#35
+('Fairy Pokémon'),
+('Fox Pokémon'),
+('Fox Pokémon'),
+('Balloon Pokémon'),
+('Balloon Pokémon'),#40
+('Bat Pokémon'),
+('Bat Pokémon'),
+('Weed Pokémon'),
+('Weed Pokémon'),
+('Flower Pokémon'),#45
+('Mushroom Pokémon'),
+('Mushroom Pokémon'),
+('Insect Pokémon'),
+('Poison Moth Pokémon'),
+('Mole Pokémon'),#50
+('Mole Pokémon'),
+('Bakeneko Pokémon'),
+('Siamese Cat Pokémon'),
+('Duck Pokémon'),
+('Duck Pokémon'),#55
+('Pig Monkey Pokémon'),
+('Pig Monkey Pokémon'),
+('Puppy Pokémon'),
+('Legend Pokémon'),
+('Tadpole Pokémon'),#60
+('Tadpole Pokémon'),
+('Tadpole Pokémon'),
+('Telekinesis Pokémon'),
+('Telekinesis Pokémon'),
+('Telekinesis Pokémon'),#65
+('Superhuman Strength Pokémon'),
+('Superhuman Strength Pokémon'),
+('Superhuman Strength Pokémon'),
+('Flower Pokémon'),
+('Flycatcher Pokémon'),#70
+('Flycatcher Pokémon'),
+('Jellyfish Pokémon'),
+('Jellyfish Pokémon'),
+('Rock Pokémon'),
+('Rock Pokémon'),#75
+('Megaton Pokémon'),
+('Fire Horse Pokémon'),
+('Fire Horse Pokémon'),
+('Stupid Pokémon'),
+('Hermit Crab Pokémon'),#80
+('Magnet Pokémon'),
+('Magnet Pokémon'),
+('Spot-Billed Duck Pokémon'),
+('Twin Bird Pokémon'),
+('Triplet Bird Pokémon'),#85
+('Sea Lion Pokémon'),
+('Sea Lion Pokémon'),
+('Sludge Pokémon'),
+('Sludge Pokémon'),
+('Bivalve Pokémon'),#90
+('Bivalve Pokémon'),
+('Gaseous Pokémon'),
+('Gaseous Pokémon'),
+('Shadow Pokémon'),
+('Rock Snake Pokémon'),#95
+('Hypnosis Pokémon'),
+('Hypnosis Pokémon'),
+('Freshwater Crab Pokémon'),
+('Pincer Pokémon'),
+('Ball Pokémon'),#100
+('Ball Pokémon'),
+('Egg Pokémon'),
+('Coconut Pokémon'),
+('Lonely Pokémon'),
+('Bone Lover Pokémon'),#105
+('Kick Pokémon'),
+(''),
+(''),
+(''),
+(''),
+(''),
+(''),
+(''),
+(''),
+(''),
+(''),
+(''),
+(''),
+(''),
+(''),
+(''),
+(''),
+(''),
+(''),
+(''),
+(''),
+(''),
+(''),
+(''),
+(''),
+(''),
+(''),
+(''),
+(''),
 )
 
 eggEvolveList = (
@@ -553,6 +665,8 @@ def runWindow(winWidth = 800, winHeight = 600):
     name = canvas.create_text(500, 35, font="Verdana 30 bold", text="Pokemon Name")
 
     category = canvas.create_text(130, 120, font="Verdana 14 bold", text='')
+    
+    image = canvas.create_image(500, 120,anchor = N, image = PhotoImage(file="Who-is-that-pokemon.png"))
 
     canvas.create_text(60, 180, font="Verdana 12", text="Type")
     types = canvas.create_text(130, 180, font="Verdana 12", text="", anchor=W)
@@ -578,7 +692,9 @@ def runWindow(winWidth = 800, winHeight = 600):
             number = canvas.create_text(120, 35, font="Verdana 30 bold", text=pokemonList[current[0]][0])
             name = canvas.create_text(500, 35, font="Verdana 30 bold", text=pokemonList[current[0]][1])
             
-            canvas.create_image(500, 120,anchor = N, image = pokemonImages[current[0]])
+            nonlocal image
+            canvas.delete(image)
+            image = canvas.create_image(500, 120,anchor = N, image = pokemonImages[current[0]])
             
             typetext = ""
             if len(pokemonList[current[0]][2]) == 2:
