@@ -109,6 +109,8 @@ def runWindow(winWidth = 800, winHeight = 600):
     category = canvas.create_text(130, 120, font="Verdana 14 bold", text='')
 
     canvas.create_text(60, 180, font="Verdana 12", text="Type")
+    types = canvas.create_text(130, 180, font="Verdana 12", text="", anchor=W)
+    
     canvas.create_text(70, 260, font="Verdana 12", text="Evolve\nLevel")
     canvas.create_text(70, 340, font="Verdana 12", text="Egg\nGroups")
     
