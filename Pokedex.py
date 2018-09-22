@@ -27,6 +27,57 @@ pokemonList = (
 ('#019', 'Rattata', ('Normal')),
 ('#020', 'Raticate', ('Normal')),
 ('#021', 'Spearow', ('Normal', 'Flying')),
+<<<<<<< HEAD
+=======
+)
+
+categoryList = (
+('Seed Pokémon'),
+('Seed Pokémon'),
+('Seed Pokémon'),
+('Lizard Pokémon'),
+('Flame Pokémon'),
+('Flame Pokémon'),
+('Young Turtle \n Pokémon'),
+('Turtle Pokémon'),
+('Shell Pokémon'),
+('Caterpillar Pokémon'), #10
+('Chrysalis Pokémon'),
+('Butterfly Pokémon'),
+('Hairy Caterpillar \n Pokémon'),
+('Cocoon Pokémon'),
+('Poison Bee \n Pokémon'),
+('Small Bird \n Pokémon'),
+('Bird Pokémon'),
+('Bird Pokémon'),
+('Mouse Pokémon'),
+('Mouse Pokémon'),#20
+('Small Bird \n Pokémon'),
+)
+
+desList = (
+('For some time after its birth, it grows by \n gaining nourishment from the seed on its back.'),
+('When the bud on its back starts swelling, \n a sweet aroma wafts to indicate the flowers coming bloom.'),
+('After a rainy day, the flower on its back \n smells stronger. The scent attracts other Pokémon.'), #3
+('The fire on the tip of its tail is a measure \n of its life. If healthy, its tail burns intensely.'),
+('In the rocky mountains where Charmeleon live, \n their fiery tails shine at night like stars.'),
+('It is said that Charizards fire burns hotter \n if it has experienced harsh battles.'),
+('It shelters itself in its shell then strikes \n back with spouts of water at every opportunity.'),
+('It is said to live 10,000 years. Its furry \n tail is popular as a symbol of longevity.'),
+('The jets of water it spouts from the rocket \n cannons on its shell can punch through thick steel.'),
+('It releases a stench from its red antenna to \n repel enemies. It grows by molting repeatedly.'),#10
+('A steel-hard shell protects its tender body. \n It quietly endures hardships while awaiting evolution.'),
+('It loves the honey of flowers and can locate flower \n patches that have even tiny amounts of pollen.'),
+('It eats its weight in leaves every day. \n It fends off attackers with the needle on its head.'),
+('While awaiting evolution, it hides from \n predators under leaves and in nooks of branches.'),
+('Its best attack involves flying around at high speed, \n striking with poison needles, then flying off.'),#15
+('It is docile and prefers to avoid conflict. \n If disturbed, however, it can ferociously strike back.'),
+('It flies over its wide territory in search of prey, \n downing it with its highly developed claws.'),
+('It flies over its wide territory in search of prey, \n downing it with its highly developed claws.'),
+('It searches for food all day. It gnaws on hard objects \n to wear down its fangs, which grow constantly during its lifetime.'),
+('With its long fangs, this surprisingly violent Pokémon \n can gnaw away even thick concrete with ease.'),#20
+('It flaps its small wings busily to fly. \n Using its beak, it searches in grass for prey.'),
+>>>>>>> b8242ebc3dd38d699ed7823a917e37b745f3fedc
 )
 
 categoryList = (
@@ -140,10 +191,17 @@ def runWindow(winWidth = 800, winHeight = 600):
 
     canvas.create_text(60, 180, font="Verdana 12", text="Type")
     types = canvas.create_text(130, 180, font="Verdana 12", text="", anchor=W)
+<<<<<<< HEAD
     
     canvas.create_text(70, 260, font="Verdana 12", text="Evolve\nLevel")
     canvas.create_text(70, 340, font="Verdana 12", text="Egg\nGroups")
     
+=======
+    
+    canvas.create_text(70, 260, font="Verdana 12", text="Evolve\nLevel")
+    canvas.create_text(70, 340, font="Verdana 12", text="Egg\nGroups")
+    
+>>>>>>> b8242ebc3dd38d699ed7823a917e37b745f3fedc
     canvas.create_text(90, 530, font="Verdana 12", text="Pokedex\nDescription")
     des = canvas.create_text(430, 530, font="Verdana 12 italic", text='')
 #================================================
@@ -159,8 +217,11 @@ def runWindow(winWidth = 800, winHeight = 600):
             number = canvas.create_text(120, 35, font="Verdana 30 bold", text=pokemonList[current[0]][0])
             name = canvas.create_text(500, 35, font="Verdana 30 bold", text=pokemonList[current[0]][1])
             
+<<<<<<< HEAD
             canvas.create_image(400,400,anchor = NW, image = pokemonImages[current])
             
+=======
+>>>>>>> b8242ebc3dd38d699ed7823a917e37b745f3fedc
             typetext = ""
             if len(pokemonList[current[0]][2]) == 2:
                 typetext = pokemonList[current[0]][2][0] + "/" + pokemonList[current[0]][2][1]
@@ -185,4 +246,8 @@ def main():
     runWindow()
 
 if __name__ == '__main__':
+<<<<<<< HEAD
     main()
+=======
+    main()
+>>>>>>> b8242ebc3dd38d699ed7823a917e37b745f3fedc
