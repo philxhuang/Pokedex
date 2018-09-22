@@ -853,7 +853,7 @@ def runWindow(winWidth = 800, winHeight = 600):
             
             nonlocal image
             canvas.delete(image)
-            image = canvas.create_image(500, 120,anchor = N, image = pokemonImages[current[0]].zoom(5))
+            image = canvas.create_image(500, 120,anchor = N, image = pokemonImages[current[0]])
             
             typetext = ""
             if len(pokemonList[current[0]][2]) == 2:
