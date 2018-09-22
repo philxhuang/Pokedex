@@ -7,7 +7,7 @@ To catch them is my real test
 To train them is my cause"""
 
 import random
-from tkinker import *
+from tkinter import *
 
 def runWindow(winWidth=500, winHeight=500):
     root = Tk()
