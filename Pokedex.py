@@ -1,7 +1,7 @@
 #################################################
 # rock_paper_scissors.py
 #################################################
-
+#Hi, this is Gwyneth
 import random
 
 def getTurnsToPlay():
