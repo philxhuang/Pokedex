@@ -3,15 +3,27 @@ import string
 import copy
 
 from tkinter import *
-    
+
+pokemonList = {
+("#001", "Bulbasaur", ("Grass", "Poison")),
+("#002", "Ivysaur", ("Grass", "Poison")),
+("#003", "Venusaur", ("Grass", "Poison")),
+("#004", "Charmander", ("Fire")),
+("#005", "Charmeleon", ("Fire")),
+("#006", "Charizarad", ("Fire", "Flying")),
+("#007", "Squirtle", ("Water")),
+("#008", "Wartotle", ("Water")),
+("#009", "Blastoise", ("Water"))
+}
+
 def runWindow(winWidth = 800, winHeight = 600):
     root = Tk()
     root.resizable(width=False, height=False) # prevents resizing window
 
     scrollbar = Scrollbar(root, bd=0)
     pokelist = Listbox(root, yscrollcommand = scrollbar.set, selectmode=BROWSE)
-    for i in range(100):
-        pokelist.insert(END, str(i), "Bulbasaur")
+    for i in pokemonList:
+        pokelist.insert(END, i[0] + " " + i[1])
     scrollbar.config(command=pokelist.yview)
     scrollbar.pack(side=LEFT, fill=Y)
     pokelist.pack(side=LEFT, fill=Y)
@@ -21,7 +33,7 @@ def runWindow(winWidth = 800, winHeight = 600):
     canvas = Canvas(root, width=winWidth, height=winHeight)
     canvas.configure(bd=0, highlightthickness=0)
     canvas.pack(side=RIGHT, fill=BOTH)
-     
+
     
     canvas.create_rectangle(350, 50, 750, 550, fill = "CadetBlue1", outline = "turquoise1")
     
